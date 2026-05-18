@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Brenda Brooks — The Canyon Communities Specialist | Boynton Beach</title>
+<meta name="description" content="Brenda Brooks has specialized in the GL Homes Canyon communities of Boynton Beach — Canyon Trails, Canyon Isles, Canyon Lakes and Canyon Springs — for over 15 years. The neighborhood expert for buyers and sellers." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  /* Option F — Canyon Terracotta & Palm
+     Derived from GL Homes Canyon (all-ages Mediterranean family series) */
+  --cream:        #F3EDE0;
+  --warm-white:   #FBF6EC;
+  --dark:         #2E3D2A;
+  --dark-soft:    #4A5C3F;
+  --accent:       #C2703D;
+  --accent-dark:  #9A5228;
+  --accent-light: #F1E4D2;
+  --sand:         #DDD2BC;
+  --text-muted:   #5C544A;
+
+  --accent-rgb:        194, 112, 61;
+  --dark-rgb:          46, 61, 42;
+  --warm-white-rgb:    251, 246, 236;
+  --hero-overlay-tint: 9, 14, 7;
+
+  --rail-w: 300px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--warm-white);
+  color:var(--dark-soft);
+  font-weight:300;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:300;color:var(--dark);line-height:1.12}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.eyebrow{
+  font-size:11px;letter-spacing:0.3em;text-transform:uppercase;
+  color:var(--accent-dark);font-weight:500;font-family:'DM Sans',sans-serif;
+}
+
+/* ---------- STICKY SIDE-RAIL ---------- */
+.rail{
+  position:fixed;top:0;left:0;width:var(--rail-w);height:100vh;
+  background:var(--dark);color:var(--warm-white);
+  display:flex;flex-direction:column;
+  padding:48px 38px;z-index:100;
+}
+.rail-head{
+  width:84px;height:84px;border-radius:50%;overflow:hidden;
+  border:2px solid rgba(var(--warm-white-rgb),0.22);margin-bottom:22px;
+  background:var(--dark-soft);flex:0 0 auto;
+}
+.rail-head img{width:100%;height:100%;object-fit:cover;object-position:center 18%;}
+.rail-name{
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  font-size:34px;color:var(--warm-white);line-height:1.05;letter-spacing:0.01em;
+}
+.rail-role{
+  margin-top:14px;font-size:11px;letter-spacing:0.26em;text-transform:uppercase;
+  color:var(--accent-light);font-weight:500;
+}
+.rail-rule{height:1px;background:rgba(var(--warm-white-rgb),0.16);margin:32px 0;}
+.rail-nav{display:flex;flex-direction:column;gap:3px;flex:1;}
+.rail-nav a{
+  font-size:14px;color:rgba(var(--warm-white-rgb),0.78);
+  padding:9px 0 9px 0;letter-spacing:0.02em;
+  transition:color .35s ease,padding-left .35s ease;
+  border-left:1px solid transparent;padding-left:0;
+}
+.rail-nav a:hover{color:var(--warm-white);padding-left:14px;}
+.rail-cta{
+  display:block;text-align:center;background:var(--accent);color:var(--warm-white);
+  font-size:13px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;
+  padding:15px 18px;border-radius:2px;margin-bottom:22px;
+  transition:background .3s ease,transform .3s ease;
+}
+.rail-cta:hover{background:var(--accent-dark);transform:translateY(-2px);}
+.rail-contact{font-size:12.5px;color:rgba(var(--warm-white-rgb),0.62);line-height:1.9;}
+.rail-contact strong{display:block;color:rgba(var(--warm-white-rgb),0.92);font-weight:500;font-size:13px;letter-spacing:0.04em;}
+.rail-contact a:hover{color:var(--accent-light);}
+
+/* mobile top bar (hidden on desktop) */
+.topbar{display:none;}
+
+/* ---------- MAIN COLUMN ---------- */
+.main{margin-left:var(--rail-w);}
+
+/* ---------- HERO (full-bleed) ---------- */
+.hero{
+  position:relative;min-height:100vh;overflow:hidden;background:var(--dark);
+  display:flex;align-items:center;
+}
+.hero-media{position:absolute;inset:0;overflow:hidden;}
+.hero-media img{width:100%;height:100%;object-fit:cover;}
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,
+    rgba(var(--hero-overlay-tint),0.78) 0%,
+    rgba(var(--hero-overlay-tint),0.55) 38%,
+    rgba(var(--hero-overlay-tint),0.30) 70%,
+    rgba(var(--hero-overlay-tint),0.15) 100%);
+}
+.hero-plate{
+  position:relative;z-index:5;margin-left:8vw;
+  width:560px;max-width:62vw;background:var(--warm-white);
+  padding:58px 56px;
+  box-shadow:0 30px 70px -36px rgba(var(--dark-rgb),0.55);
+}
+.hero-plate .eyebrow{margin-bottom:20px;}
+.hero-plate h1{font-size:clamp(40px,4.4vw,62px);margin-bottom:22px;}
+.hero-plate h1 em{font-style:italic;color:var(--accent-dark);}
+.hero-plate p{font-size:15.5px;color:var(--text-muted);line-height:1.85;margin-bottom:30px;}
+.hero-plate .pbtn{
+  display:inline-block;background:var(--dark);color:var(--warm-white);
+  font-size:12px;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;
+  padding:16px 34px;border-radius:2px;transition:background .3s ease,transform .3s ease;
+}
+.hero-plate .pbtn:hover{background:var(--accent);transform:translateY(-2px);}
+
+/* ---------- SECTION SHELL ---------- */
+section{padding:110px 8vw;}
+.sec-head{max-width:680px;margin-bottom:62px;}
+.sec-head .eyebrow{display:block;margin-bottom:18px;}
+.sec-head h2{font-size:clamp(34px,4vw,54px);}
+.sec-head p{margin-top:20px;font-size:15.5px;color:var(--text-muted);max-width:600px;}
+
+/* ---------- COMMUNITIES (offset masonry) ---------- */
+.communities{background:var(--cream);}
+.masonry{column-count:2;column-gap:26px;}
+.cm-card{
+  break-inside:avoid;margin-bottom:26px;background:var(--warm-white);
+  border:1px solid var(--sand);overflow:hidden;
+  transition:transform .45s ease,box-shadow .45s ease;
+}
+.cm-card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(var(--dark-rgb),0.42);}
+.cm-photo{overflow:hidden;}
+.cm-photo img{width:100%;object-fit:cover;transition:transform 1s ease;}
+.cm-card:hover .cm-photo img{transform:scale(1.06);}
+.cm-card.tall .cm-photo img{aspect-ratio:3/4;}
+.cm-card.wide .cm-photo img{aspect-ratio:4/3;}
+.cm-card.short .cm-photo img{aspect-ratio:16/10;}
+.cm-body{padding:26px 28px 30px;}
+.cm-body .tag{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-dark);font-weight:500;}
+.cm-body h3{font-size:27px;margin:12px 0 8px;}
+.cm-meta{font-size:13px;color:var(--text-muted);letter-spacing:0.04em;}
+.cm-price{margin-top:16px;font-size:15px;color:var(--dark);font-weight:500;font-family:'DM Sans',sans-serif;}
+.cm-desc{margin-top:14px;font-size:14px;color:var(--text-muted);line-height:1.8;}
+.cm-foot{
+  margin-top:20px;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--accent-dark);font-weight:500;
+}
+.cm-note{margin-top:46px;font-size:13px;color:var(--text-muted);font-style:italic;text-align:center;}
+
+/* ---------- ABOUT (pull-quote + timeline) ---------- */
+.about{background:var(--warm-white);}
+.about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:78px;align-items:center;}
+.about-portrait{position:relative;}
+.about-portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;}
+.about-portrait .badge{
+  position:absolute;bottom:-22px;left:-22px;background:var(--dark);color:var(--warm-white);
+  padding:22px 28px;max-width:230px;
+}
+.about-portrait .badge .n{font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--accent-light);line-height:1;}
+.about-portrait .badge .l{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;margin-top:8px;color:rgba(var(--warm-white-rgb),0.82);}
+.pull-quote{
+  font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,3.1vw,42px);
+  color:var(--dark);line-height:1.28;margin-bottom:34px;
+}
+.pull-quote em{font-style:italic;color:var(--accent-dark);}
+.about-body p{font-size:15px;color:var(--text-muted);margin-bottom:18px;line-height:1.85;}
+.timeline{margin-top:40px;border-left:1px solid var(--sand);padding-left:30px;}
+.tl-item{position:relative;padding-bottom:26px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{
+  content:"";position:absolute;left:-35px;top:5px;width:9px;height:9px;border-radius:50%;
+  background:var(--accent);
+}
+.tl-item .ty{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-dark);font-weight:500;}
+.tl-item .td{font-size:15px;color:var(--dark-soft);margin-top:5px;}
+
+/* ---------- LIFESTYLE (offset alternating rows) ---------- */
+.lifestyle{background:var(--cream);}
+.ls-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  margin-bottom:90px;
+}
+.ls-row:last-child{margin-bottom:0;}
+.ls-row:nth-child(even) .ls-media{order:2;}
+.ls-media{overflow:hidden;}
+.ls-media img{width:100%;aspect-ratio:5/4;object-fit:cover;transition:transform 1.1s ease;}
+.ls-row:hover .ls-media img{transform:scale(1.05);}
+.ls-copy .eyebrow{display:block;margin-bottom:16px;}
+.ls-copy h3{font-size:clamp(26px,3vw,40px);margin-bottom:18px;}
+.ls-copy p{font-size:15px;color:var(--text-muted);line-height:1.85;}
+
+/* ---------- RESIDENT VOICES (slider) ---------- */
+.voices{background:var(--warm-white);}
+.slider-wrap{position:relative;}
+.slider{
+  display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;padding-bottom:8px;cursor:grab;
+}
+.slider::-webkit-scrollbar{display:none}
+.slider.dragging{cursor:grabbing;}
+.v-card{
+  flex:0 0 calc(50% - 13px);scroll-snap-align:start;
+  background:var(--cream);border-top:2px solid var(--accent);
+  padding:44px 42px;
+}
+.v-card .q{font-family:'Cormorant Garamond',serif;font-size:23px;font-style:italic;color:var(--dark);line-height:1.5;margin-bottom:26px;}
+.v-card .who{font-size:13px;letter-spacing:0.05em;color:var(--text-muted);}
+.v-card .who strong{display:block;color:var(--dark);font-weight:500;font-size:14px;letter-spacing:0.03em;margin-bottom:3px;}
+.slider-foot{display:flex;align-items:center;gap:22px;margin-top:38px;}
+.dots{display:flex;gap:9px;flex:1;}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--sand);border:none;padding:0;cursor:pointer;transition:background .3s ease,width .3s ease;}
+.dot.active{background:var(--accent);width:24px;border-radius:4px;}
+.arrows{display:flex;gap:10px;}
+.arrows button{
+  width:46px;height:46px;border:1px solid var(--sand);background:transparent;
+  color:var(--dark);font-size:16px;cursor:pointer;border-radius:50%;
+  transition:background .3s ease,color .3s ease,border-color .3s ease;
+}
+.arrows button:hover{background:var(--dark);color:var(--warm-white);border-color:var(--dark);}
+.counter{font-size:13px;color:var(--text-muted);letter-spacing:0.08em;min-width:54px;text-align:right;}
+
+/* ---------- CONTACT (asymmetric) ---------- */
+.contact{background:var(--cream);}
+.contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:70px;align-items:start;}
+.contact-info h2{font-size:clamp(32px,3.6vw,50px);margin-bottom:24px;}
+.contact-info p{font-size:15px;color:var(--text-muted);margin-bottom:38px;max-width:420px;}
+.ci-item{display:flex;gap:18px;align-items:flex-start;margin-bottom:26px;}
+.ci-icon{
+  flex:0 0 46px;width:46px;height:46px;border-radius:50%;
+  background:var(--accent-light);display:flex;align-items:center;justify-content:center;
+}
+.ci-icon svg{width:20px;height:20px;stroke:var(--dark-soft);stroke-width:1.75;fill:none;}
+.ci-text{min-width:0;flex:1;}
+.ci-text .l{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent-dark);font-weight:500;}
+.ci-text .v{font-size:16px;color:var(--dark);margin-top:4px;overflow-wrap:break-word;word-break:break-word;}
+.contact-form{background:var(--warm-white);padding:50px 48px;border:1px solid var(--sand);}
+.contact-form .eyebrow{display:block;margin-bottom:26px;}
+.field{margin-bottom:22px;}
+.field label{display:block;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:9px;}
+.field input,.field textarea,.field select{
+  width:100%;padding:14px 16px;border:1px solid var(--sand);background:var(--cream);
+  font-family:'DM Sans',sans-serif;font-size:15px;color:var(--dark);font-weight:300;
+}
+.field input:focus,.field textarea:focus,.field select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent;}
+.field textarea{resize:vertical;min-height:110px;}
+.form-btn{
+  width:100%;background:var(--accent);color:var(--warm-white);border:none;
+  font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;
+  font-weight:500;padding:18px;cursor:pointer;border-radius:2px;
+  transition:background .3s ease,transform .3s ease;
+}
+.form-btn:hover{background:var(--accent-dark);transform:translateY(-2px);}
+
+/* ---------- PAGE-END (light flex row) ---------- */
+.page-end{
+  background:var(--warm-white);border-top:1px solid var(--sand);
+  padding:54px 8vw;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;
+}
+.pe-mark{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--dark);}
+.pe-mark span{display:block;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent-dark);margin-top:6px;font-weight:500;}
+.pe-meta{font-size:12px;color:var(--text-muted);line-height:1.9;text-align:right;max-width:440px;}
+
+/* ---------- REVEAL ANIMATIONS ---------- */
+.r{opacity:0;transform:translateY(28px);animation:rise .9s cubic-bezier(.16,.8,.3,1) forwards;}
+.r1{animation-delay:.15s}.r2{animation-delay:.32s}.r3{animation-delay:.5s}.r4{animation-delay:.68s}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+.sr{opacity:0;transform:translateY(36px);transition:opacity 1s ease,transform 1s cubic-bezier(.16,.8,.3,1);}
+.sr.vis{opacity:1;transform:translateY(0);}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:1024px){
+  :root{--rail-w:0px;}
+  .rail{
+    position:fixed;top:0;left:0;width:100%;height:auto;flex-direction:row;
+    align-items:center;justify-content:space-between;padding:16px 22px;z-index:200;
+  }
+  .rail-name{font-size:19px;}
+  .rail-role,.rail-rule,.rail-nav,.rail-contact{display:none;}
+  .rail .r.r1{
+    display:flex;align-items:center;gap:14px;flex:1;min-width:0;margin:0;
+  }
+  .rail-head{
+    display:block;width:44px;height:44px;margin-bottom:0;
+    border-width:1.5px;
+  }
+  .rail-name br{display:none;}
+  .rail-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .rail-cta{margin-bottom:0;padding:11px 20px;font-size:11px;flex:0 0 auto;white-space:nowrap;}
+  .main{margin-left:0;padding-top:76px;}
+  .hero{min-height:78vh;}
+  .hero-plate{
+    margin:0 22px;width:auto;max-width:none;padding:42px 34px;
+    box-shadow:0 24px 50px -30px rgba(var(--dark-rgb),0.45);
+  }
+  section{padding:80px 7vw;}
+  .about-grid{grid-template-columns:1fr;gap:60px;}
+  .about-portrait{max-width:420px;}
+  .about-portrait .badge{left:0;bottom:-18px;}
+  .contact-grid{grid-template-columns:1fr;gap:48px;}
+}
+@media(max-width:760px){
+  .masonry{column-count:1;}
+  .ls-row{grid-template-columns:1fr;gap:30px;margin-bottom:64px;}
+  .ls-row:nth-child(even) .ls-media{order:0;}
+  .v-card{flex:0 0 86%;padding:36px 32px;}
+  .hero-plate h1{font-size:34px;}
+  .sec-head{margin-bottom:46px;}
+  .page-end{flex-direction:column;align-items:flex-start;}
+  .pe-meta{text-align:left;}
+}
+@media(max-width:420px){
+  .rail-name{font-size:17px;letter-spacing:0.01em;}
+  .rail-head{width:40px;height:40px;}
+  .rail .r.r1{gap:11px;}
+  .rail-cta{padding:10px 13px;font-size:10px;letter-spacing:0.04em;}
+  section{padding:64px 22px;}
+  .hero-plate{padding:32px 24px;margin:0 14px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== STICKY SIDE-RAIL ===== -->
+<aside class="rail">
+  <div class="r r1">
+    <div class="rail-head">
+      <img src="https://media.licdn.com/dms/image/v2/C5603AQEanIlcMhqxag/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517671615892?e=1780531200&v=beta&t=mxzCHcUwZKuZTwg9pjfChIZ-HekggGFAjYu8DomYuBk"
+           alt="Brenda Brooks, Broker at One Step Ahead Realty"
+           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=400&q=80&fit=crop';" />
+    </div>
+    <div class="rail-name">Brenda<br/> Brooks</div>
+    <div class="rail-role">The Canyon Communities Specialist</div>
+  </div>
+  <div class="rail-rule r r2"></div>
+  <nav class="rail-nav r r2" aria-label="Primary">
+    <a href="#communities">The Canyons</a>
+    <a href="#about">About Brenda</a>
+    <a href="#lifestyle">The Lifestyle</a>
+    <a href="#voices">Resident Voices</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="rail-cta r r3" href="#contact">Schedule a Tour</a>
+  <div class="rail-contact r r4">
+    <strong>One Step Ahead Realty</strong>
+    <a href="tel:+15619517332">(561) 951-7332</a><br/>
+    <a href="mailto:brenda@brendabrooks.com">brenda@brendabrooks.com</a><br/>
+    Boynton Beach, Florida
+  </div>
+</aside>
+
+<div class="main">
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-media r r1">
+      <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=1800&q=80&fit=crop"
+           alt="Resort-style community pool in a gated Boynton Beach neighborhood"
+           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1800&q=80&fit=crop';" />
+    </div>
+    <div class="hero-plate r r3">
+      <span class="eyebrow">GL Homes · Boynton Beach</span>
+      <h1>The Canyons aren't a market to me. They're <em>home</em>.</h1>
+      <p>For more than fifteen years I've helped families buy and sell inside Canyon Trails, Canyon Isles, Canyon Lakes and Canyon Springs. I don't cover these communities — I know them, street by street.</p>
+      <a class="pbtn" href="#communities">Explore the Canyons</a>
+    </div>
+  </header>
+
+  <!-- ===== COMMUNITIES ===== -->
+  <section class="communities" id="communities">
+    <div class="sec-head sr">
+      <span class="eyebrow">Currently For Sale</span>
+      <h2>Homes in the Canyon communities</h2>
+      <p>Live listings across the GL Homes Canyon family in Boynton Beach, updated daily from the Beaches MLS. Every home below is in a community I work in every week.</p>
+    </div>
+    <div class="masonry">
+
+      <article class="cm-card tall sr">
+        <div class="cm-photo"><img src="https://cdn.photos.sparkplatform.com/flr/20260501143853691697000000-o.jpg" alt="11565 Mantova Bay — 6-bedroom estate in Canyon Trails, Boynton Beach" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&fit=crop';" /></div>
+        <div class="cm-body">
+          <span class="tag">Canyon Trails</span>
+          <h3>11565 Mantova Bay</h3>
+          <div class="cm-meta">6 Bed · 5 Bath · Two-Story Estate</div>
+          <div class="cm-price">$1,399,000</div>
+          <p class="cm-desc">A rarely available, one-of-a-kind estate reimagined for indoor-outdoor living, with a massive covered lanai and a versatile loft — almost never seen in the community.</p>
+          <div class="cm-foot">New Price · Estate</div>
+        </div>
+      </article>
+
+      <article class="cm-card short sr">
+        <div class="cm-photo"><img src="https://cdn.photos.sparkplatform.com/flr/20260326173729427694000000-o.jpg" alt="10562 Cape Delabra — 3-bedroom lakefront ranch in Canyon Trails, Boynton Beach" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80&fit=crop';" /></div>
+        <div class="cm-body">
+          <span class="tag">Canyon Trails</span>
+          <h3>10562 Cape Delabra</h3>
+          <div class="cm-meta">3 Bed · 2 Bath · Ranch</div>
+          <div class="cm-price">$728,000</div>
+          <p class="cm-desc">Breathtaking long-lake views, vaulted ceilings with crown molding, a whole-home generator, and an updated kitchen with granite and 42&quot; cabinets.</p>
+          <div class="cm-foot">New Price · Lake View</div>
+        </div>
+      </article>
+
+      <article class="cm-card wide sr">
+        <div class="cm-photo"><img src="https://cdn.photos.sparkplatform.com/flr/20260331204733250775000000-o.jpg" alt="8136 Pinnacle Pass — 4-bedroom one-story lakefront home in Canyon Trails, Boynton Beach" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80&fit=crop';" /></div>
+        <div class="cm-body">
+          <span class="tag">Canyon Trails · Tobago Grande</span>
+          <h3>8136 Pinnacle Pass</h3>
+          <div class="cm-meta">4 Bed · 2.5 Bath · One-Story Lakefront</div>
+          <div class="cm-price">$749,000</div>
+          <p class="cm-desc">Elegant one-story lakefront, move-in ready, with soaring ceilings, new luxury vinyl flooring, an oversized island, and accordion hurricane shutters.</p>
+          <div class="cm-foot">Move-In Ready</div>
+        </div>
+      </article>
+
+      <article class="cm-card short sr">
+        <div class="cm-photo"><img src="https://cdn.photos.sparkplatform.com/flr/20260506232235190135000000-o.jpg" alt="10515 Cape Delabra — 4-bedroom Peninsula-model home in Canyon Trails, Boynton Beach" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80&fit=crop';" /></div>
+        <div class="cm-body">
+          <span class="tag">Canyon Trails · Peninsula</span>
+          <h3>10515 Cape Delabra</h3>
+          <div class="cm-meta">4 Bed · 3 Bath · Two-Story</div>
+          <div class="cm-price">$774,999</div>
+          <p class="cm-desc">A dazzling four-bedroom Peninsula model in guard-gated Canyon Trails — a sought-after floor plan with generous living space throughout.</p>
+          <div class="cm-foot">Peninsula Model</div>
+        </div>
+      </article>
+
+      <article class="cm-card wide sr">
+        <div class="cm-photo"><img src="https://cdn.photos.sparkplatform.com/flr/20260510101557804580000000-o.jpg" alt="8203 Half Dome — 4-bedroom home with first-floor suite in Canyon Trails, Boynton Beach" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=800&q=80&fit=crop';" /></div>
+        <div class="cm-body">
+          <span class="tag">Canyon Trails · Peninsula</span>
+          <h3>8203 Half Dome</h3>
+          <div class="cm-meta">4 Bed · 3 Bath · Two-Story</div>
+          <div class="cm-price">$775,000</div>
+          <p class="cm-desc">A rare floor plan with a full bedroom and bath on the first floor, an open great-room layout, and modern white porcelain tile throughout.</p>
+          <div class="cm-foot">First-Floor Suite</div>
+        </div>
+      </article>
+
+      <article class="cm-card tall sr">
+        <div class="cm-photo"><img src="https://cdn.photos.sparkplatform.com/flr/20260331021543526217000000-o.jpg" alt="8292 Calabria Lakes — 5-bedroom Antigua-model home in Canyon Trails, Boynton Beach" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?w=800&q=80&fit=crop';" /></div>
+        <div class="cm-body">
+          <span class="tag">Canyon Trails · Antigua</span>
+          <h3>8292 Calabria Lakes</h3>
+          <div class="cm-meta">5 Bed · 4 Bath · Two-Story</div>
+          <div class="cm-price">$850,000</div>
+          <p class="cm-desc">A picturesque Antigua-model home offering generous space for a growing family in the heart of guard-gated Canyon Trails.</p>
+          <div class="cm-foot">Family Floorplan</div>
+        </div>
+      </article>
+
+      <article class="cm-card wide sr">
+        <div class="cm-photo"><img src="https://cdn.photos.sparkplatform.com/fl/20260211132742255562000000-o.jpg" alt="11477 Mantova Bay — 5-bedroom Abacoa-model pool home in Canyon Trails, Boynton Beach" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80&fit=crop';" /></div>
+        <div class="cm-body">
+          <span class="tag">Canyon Trails · Abacoa</span>
+          <h3>11477 Mantova Bay</h3>
+          <div class="cm-meta">5 Bed · 4 Bath · Pool Home</div>
+          <div class="cm-price">$999,000</div>
+          <p class="cm-desc">A gorgeous pool home on a premium private lot with unobstructed lake views, impact glass front doors, accordion shutters, and wood-look tile.</p>
+          <div class="cm-foot">Premium Lot · Pool</div>
+        </div>
+      </article>
+
+      <article class="cm-card short sr">
+        <div class="cm-photo"><img src="https://cdn.photos.sparkplatform.com/flr/20260502015535659966000000-o.jpg" alt="8230 Bergen Peak — 5-bedroom updated two-story home in Canyon Trails, Boynton Beach" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=800&q=80&fit=crop';" /></div>
+        <div class="cm-body">
+          <span class="tag">Canyon Trails</span>
+          <h3>8230 Bergen Peak</h3>
+          <div class="cm-meta">5 Bed · 4 Bath · Two-Story</div>
+          <div class="cm-price">$1,050,000</div>
+          <p class="cm-desc">Beautifully updated two-story with a flexible first-floor guest bedroom that works as an office or playroom, plus an inviting open layout.</p>
+          <div class="cm-foot">Updated · Flex Suite</div>
+        </div>
+      </article>
+
+      <p class="cm-note sr">Also serving Canyon Isles, Canyon Lakes &amp; Canyon Springs — plus Cobblestone Creek, GreyStone, Palm Meadows and Tuscany. Ask me what's coming to market.</p>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-portrait sr">
+        <img src="https://media.licdn.com/dms/image/v2/C5603AQEanIlcMhqxag/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517671615892?e=1780531200&v=beta&t=mxzCHcUwZKuZTwg9pjfChIZ-HekggGFAjYu8DomYuBk"
+             alt="Brenda Brooks, Broker at One Step Ahead Realty"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=800&q=80&fit=crop';" />
+        <div class="badge">
+          <div class="n">15+</div>
+          <div class="l">Years in the Canyons</div>
+        </div>
+      </div>
+      <div class="about-body sr">
+        <span class="eyebrow" style="display:block;margin-bottom:22px;">About Brenda</span>
+        <p class="pull-quote">Same broker. Same builder. The <em>Canyon communities</em>, mastered — one family at a time.</p>
+        <p>I'm Brenda Brooks, a Broker with One Step Ahead Realty serving Palm Beach County. My focus has always been simple: the GL Homes Canyon communities of west Boynton Beach. While other agents pass through, I've stayed — long enough to know the floorplans by name, the lake lots worth waiting for, and what a home in Canyon Trails should really sell for.</p>
+        <p>I offer the convenience of technology without losing the personal touch. The resources matter, but they'll never replace the time I spend with you — as your guide through one of the biggest decisions your family will make.</p>
+        <div class="timeline">
+          <div class="tl-item"><div class="ty">Since 2007</div><div class="td">Specializing in the GL Homes Canyon communities of Boynton Beach</div></div>
+          <div class="tl-item"><div class="ty">Broker</div><div class="td">One Step Ahead Realty — Palm Beach County</div></div>
+          <div class="tl-item"><div class="ty">Canyon Trails</div><div class="td">Recognized neighborhood specialist across all four Canyon communities</div></div>
+          <div class="tl-item"><div class="ty">Today</div><div class="td">Active listings across Canyon Trails, Isles, Lakes &amp; Springs</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIFESTYLE ===== -->
+  <section class="lifestyle" id="lifestyle">
+    <div class="sec-head sr">
+      <span class="eyebrow">The Canyon Lifestyle</span>
+      <h2>Built for the whole family</h2>
+      <p>The Canyons were designed by GL Homes as all-ages communities — resort amenities, A-rated schools, and a guard gate that lets kids ride bikes until dusk.</p>
+    </div>
+
+    <div class="ls-row sr">
+      <div class="ls-media"><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=900&q=80&fit=crop" alt="Families enjoying a resort-style community pool" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900&q=80&fit=crop';" /></div>
+      <div class="ls-copy">
+        <span class="eyebrow">The Clubhouse</span>
+        <h3>An 8,000 sq ft resort, steps from your door</h3>
+        <p>Every Canyon community centers on a clubhouse with a resort-style pool, a separate wading and splash area for the little ones, a fitness center, a social hall with catering kitchen, and a kids' playroom — the kind of amenities families actually use every weekend.</p>
+      </div>
+    </div>
+
+    <div class="ls-row sr">
+      <div class="ls-media"><img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=900&q=80&fit=crop" alt="Children playing tennis on a community court" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=900&q=80&fit=crop';" /></div>
+      <div class="ls-copy">
+        <span class="eyebrow">Active Living</span>
+        <h3>Courts, fields and friends nearby</h3>
+        <p>Har-Tru clay tennis courts, basketball, volleyball, an indoor sport court and ping-pong — the Canyons are made for active families. It's a community where weekends fill themselves and neighbors become friends.</p>
+      </div>
+    </div>
+
+    <div class="ls-row sr">
+      <div class="ls-media"><img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=900&q=80&fit=crop" alt="Family walking past A-rated school in Boynton Beach" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&q=80&fit=crop';" /></div>
+      <div class="ls-copy">
+        <span class="eyebrow">Location &amp; Schools</span>
+        <h3>A-rated schools, minutes to everything</h3>
+        <p>Served by A-rated Palm Beach County schools and moments from Canyon Town Center, with the Boynton Beach Boulevard Turnpike exit just outside the gate. Beaches, dining and shopping are a short drive — the Canyons sit right where families want to be.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESIDENT VOICES ===== -->
+  <section class="voices" id="voices">
+    <div class="sec-head sr">
+      <span class="eyebrow">Resident Voices</span>
+      <h2>Neighbors, not just clients</h2>
+    </div>
+    <div class="slider-wrap sr">
+      <div class="slider" id="slider" role="list">
+        <div class="v-card" role="listitem">
+          <div class="q">"Brenda knew Canyon Trails better than the listing agent did. She told us which lots held value and was right about every one."</div>
+          <div class="who"><strong>Placeholder — Canyon Trails Buyer</strong>Sample testimonial · to be replaced with a real review</div>
+        </div>
+        <div class="v-card" role="listitem">
+          <div class="q">"We sold our Canyon Isles home above asking in a week. Fifteen years in these communities is not a marketing line — it's an advantage."</div>
+          <div class="who"><strong>Placeholder — Canyon Isles Seller</strong>Sample testimonial · to be replaced with a real review</div>
+        </div>
+        <div class="v-card" role="listitem">
+          <div class="q">"She walked our kids around the clubhouse while we talked numbers. Brenda gets that buying here is a family decision, not a transaction."</div>
+          <div class="who"><strong>Placeholder — Canyon Lakes Family</strong>Sample testimonial · to be replaced with a real review</div>
+        </div>
+        <div class="v-card" role="listitem">
+          <div class="q">"Responsive, honest, and genuinely knowledgeable about the Canyons. We've already sent her two neighbors."</div>
+          <div class="who"><strong>Placeholder — Canyon Springs Buyer</strong>Sample testimonial · to be replaced with a real review</div>
+        </div>
+      </div>
+      <div class="slider-foot">
+        <div class="dots" id="dots"></div>
+        <div class="counter" id="counter">1 / 4</div>
+        <div class="arrows">
+          <button id="prev" aria-label="Previous testimonial">&larr;</button>
+          <button id="next" aria-label="Next testimonial">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="contact-grid">
+      <div class="contact-info sr">
+        <span class="eyebrow" style="display:block;margin-bottom:18px;">Let's Talk</span>
+        <h2>Thinking about the Canyons?</h2>
+        <p>Whether you're buying your family's forever home or selling one you've loved, let's talk about your move in the community I know best.</p>
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="ci-text"><div class="l">Call or Text</div><div class="v">(561) 951-7332</div></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+          <div class="ci-text"><div class="l">Email</div><div class="v">brenda@brendabrooks.com</div></div>
+        </div>
+        <div class="ci-item">
+          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="ci-text"><div class="l">Service Area</div><div class="v">The Canyon Communities · Boynton Beach, FL</div></div>
+        </div>
+      </div>
+      <div class="contact-form sr">
+        <span class="eyebrow">Send a Message</span>
+        <div class="field">
+          <label for="nm">Name</label>
+          <input id="nm" type="text" aria-label="Your name" placeholder="Your name" />
+        </div>
+        <div class="field">
+          <label for="em">Email</label>
+          <input id="em" type="email" aria-label="Your email address" placeholder="you@email.com" />
+        </div>
+        <div class="field">
+          <label for="ph">Phone</label>
+          <input id="ph" type="tel" aria-label="Your phone number" placeholder="(561) 000-0000" />
+        </div>
+        <div class="field">
+          <label for="iq">I'm interested in</label>
+          <select id="iq" aria-label="What you are interested in">
+            <option>Buying in the Canyons</option>
+            <option>Selling my Canyon home</option>
+            <option>A market valuation</option>
+            <option>Just exploring</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ms">Message</label>
+          <textarea id="ms" aria-label="Your message" placeholder="Tell me a little about what you're looking for..."></textarea>
+        </div>
+        <button class="form-btn" id="sendBtn" type="button">Send to Brenda</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAGE-END ===== -->
+  <footer class="page-end">
+    <div class="pe-mark">Brenda Brooks<span>One Step Ahead Realty</span></div>
+    <div class="pe-meta">
+      Brenda Brooks is an independent real estate professional with One Step Ahead Realty and is not affiliated with or employed by GL Homes. Equal Housing Opportunity. Listing data deemed reliable but not guaranteed. © 2026 One Step Ahead Realty, Inc.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* Scroll reveal — below-the-fold */
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('vis'); io.unobserve(e.target);} });
+  },{threshold:0.08,rootMargin:'0px 0px -32px 0px'});
+  document.querySelectorAll('.sr').forEach(function(el){io.observe(el);});
+
+  /* Slider */
+  var slider=document.getElementById('slider');
+  var cards=slider.querySelectorAll('.v-card');
+  var dotsWrap=document.getElementById('dots');
+  var counter=document.getElementById('counter');
+  var idx=0;
+  for(var i=0;i<cards.length;i++){
+    var d=document.createElement('button');
+    d.className='dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Go to testimonial '+(i+1));
+    (function(n){d.addEventListener('click',function(){go(n);});})(i);
+    dotsWrap.appendChild(d);
+  }
+  var dots=dotsWrap.querySelectorAll('.dot');
+  function go(n){
+    n=Math.max(0,Math.min(cards.length-1,n));
+    idx=n;
+    var card=cards[n];
+    slider.scrollTo({left:card.offsetLeft-slider.offsetLeft,behavior:'smooth'});
+    dots.forEach(function(x,j){x.classList.toggle('active',j===n);});
+    counter.textContent=(n+1)+' / '+cards.length;
+  }
+  document.getElementById('next').addEventListener('click',function(){go(idx+1);});
+  document.getElementById('prev').addEventListener('click',function(){go(idx-1);});
+  var st;
+  slider.addEventListener('scroll',function(){
+    clearTimeout(st);
+    st=setTimeout(function(){
+      var closest=0,min=1e9;
+      cards.forEach(function(c,j){
+        var dd=Math.abs(c.offsetLeft-slider.offsetLeft-slider.scrollLeft);
+        if(dd<min){min=dd;closest=j;}
+      });
+      idx=closest;
+      dots.forEach(function(x,j){x.classList.toggle('active',j===closest);});
+      counter.textContent=(closest+1)+' / '+cards.length;
+    },90);
+  });
+  /* Drag to scroll */
+  var down=false,sx,sl;
+  slider.addEventListener('mousedown',function(e){down=true;slider.classList.add('dragging');sx=e.pageX-slider.offsetLeft;sl=slider.scrollLeft;});
+  slider.addEventListener('mouseleave',function(){down=false;slider.classList.remove('dragging');});
+  slider.addEventListener('mouseup',function(){down=false;slider.classList.remove('dragging');});
+  slider.addEventListener('mousemove',function(e){ if(!down)return; e.preventDefault(); var x=e.pageX-slider.offsetLeft; slider.scrollLeft=sl-(x-sx)*1.4; });
+
+  /* Form (demo only) */
+  document.getElementById('sendBtn').addEventListener('click',function(){
+    this.textContent='Thank you — Brenda will be in touch';
+    this.style.background='var(--dark)';
+    var self=this;
+    setTimeout(function(){ self.textContent='Send to Brenda'; self.style.background='var(--accent)'; },3200);
+  });
+})();
+</script>
+</body>
+</html>
